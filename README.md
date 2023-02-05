@@ -11,6 +11,7 @@
 
 ### Description
 > In this project I created very simple CRUD app in order to help freshers learn PHP basics better !
+> Also, note that it doesn't have any secure route or input validation, etc. since it is a simple CRUD app to learn operations with PDO.
 
 ### Main Goal
 > Help new PHP developers to understand CRUD operation in plain PHP.
