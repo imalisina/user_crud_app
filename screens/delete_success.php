@@ -2,7 +2,7 @@
     include("../modules/header.php");
     include("../configs/db_details.php");
     
-    // Getting user ID from request
+    // Getting user ID from route parameters
     $userId = (int) $_GET["id"];
     // Define query to delete the user
     $deleteUserQuery = "DELETE FROM users WHERE id = $userId";

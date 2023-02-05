@@ -1,4 +1,5 @@
 <?php
+
 // Defining a new instance of PDO object
 include('../configs/db_details.php');
 // Request list of users from DB 
@@ -20,7 +21,7 @@ foreach ($result as $user) {
                     <p class="mb-0 opacity-75">From <?php echo $user["country"]; ?> &#x2022; <?php echo $user["age"]; ?> years old</p>
                 </div>
                 <div class="d-flex flex-row justify-content-center align-center">
-                    <a class="btn btn-outline-primary mx-2">Edit</a>
+                    <a href="./edit_existing_user.php?id=<?php echo $user["id"]; ?>" class="btn btn-outline-primary mx-2">Edit</a>
                     <a href="./delete_success.php?id=<?php echo $user["id"]; ?>" class="btn btn-outline-danger mx-2">Delete</a>
                 </div>
             </div>
