@@ -2,7 +2,7 @@
 // Defining a new instance of PDO object
 include('../configs/db_details.php');
 // Request list of users from DB 
-$getAllUsersQuery = "SELECT * FROM users";
+$getAllUsersQuery = "SELECT * FROM users ORDER BY id DESC";
 // Getting users from DB
 $result = $connection->query($getAllUsersQuery);
 
@@ -21,7 +21,7 @@ foreach ($result as $user) {
                 </div>
                 <div class="d-flex flex-row justify-content-center align-center">
                     <a class="btn btn-outline-primary mx-2">Edit</a>
-                    <a class="btn btn-outline-danger mx-2">Delete</a>
+                    <a href="./delete_success.php?id=<?php echo $user["id"]; ?>" class="btn btn-outline-danger mx-2">Delete</a>
                 </div>
             </div>
         </div>
